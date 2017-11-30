@@ -1,0 +1,25 @@
+ext.versions = [
+        // android sdk
+        buildTools    : "25.0.0",
+        minSdk        : 15,
+        targetSdk     : 25,
+        compileSdk    : 25,
+        supportLibrary: '25.3.1',  //v4、v7包
+        multidex      : '1.0.1',
+
+]
+
+//框架相关依赖版本
+ext.framelibrary = [
+        easypermissions: '1.0.0', //权限管理
+]
+
+//app相关依赖版本
+ext.mydemo = [
+        butterknife: '8.8.1',  //黄牛刀注解
+        butterknife_compiler: '8.8.1',  //黄牛刀注解
+]
+ext.publish = [
+        versionCode: 20170929,
+        versionName: '1.0',
+]

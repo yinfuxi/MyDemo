@@ -1,19 +1,24 @@
 apply plugin: 'com.android.application'
+apply from: '../dependencies.gradle'
+apply plugin: 'com.jakewharton.butterknife'
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     compile project(':mylibrary')
+    //黄牛刀注解
+    compile 'com.jakewharton:butterknife:' + mydemo.butterknife
+    annotationProcessor 'com.jakewharton:butterknife-compiler:'+mydemo.butterknife_compiler
 }
 
 android {
-    compileSdkVersion 25
-    buildToolsVersion "25.0.2"
+    compileSdkVersion versions.compileSdk
+    buildToolsVersion versions.buildTools
     defaultConfig {
         applicationId "com.example.mydemo"
-        minSdkVersion 15
-        targetSdkVersion 25
-        versionCode 1
-        versionName "1.0"
+        minSdkVersion versions.minSdk
+        targetSdkVersion versions.targetSdk
+        versionCode publish.versionCode
+        versionName publish.versionName
     }
     buildTypes {
         release {
@@ -27,10 +32,10 @@ android {
         javaMaxHeapSize "4g"
     }
 
-    configurations {
-        all*.exclude group: 'com.android.support', module: 'support-annotations'
-        all*.exclude group: 'com.android.support', module: 'support-v4'
-    }
+//    configurations {
+//        all*.exclude group: 'com.android.support', module: 'support-annotations'
+//        all*.exclude group: 'com.android.support', module: 'support-v4'
+//    }
 
     sourceSets {
         main {
