@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
 
+        //test
     }
 
     @OnClick({R.id.btn_native,R.id.btn_VasSonic})
