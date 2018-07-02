@@ -5,9 +5,17 @@ apply plugin: 'com.jakewharton.butterknife'
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     compile project(':mylibrary')
+    compile project(':push')
     //黄牛刀注解
     compile 'com.jakewharton:butterknife:' + mydemo.butterknife
-    annotationProcessor 'com.jakewharton:butterknife-compiler:'+mydemo.butterknife_compiler
+    annotationProcessor 'com.jakewharton:butterknife-compiler:' + mydemo.butterknife_compiler
+
+    //友盟推送相关
+
+
+    //PushSDK
+//    compile 'com.umeng.sdk:push:4.1.0'
+
 }
 
 android {
@@ -42,4 +50,11 @@ android {
             jniLibs.srcDirs = ['libs']//指定lib库目录
         }
     }
+
+    repositories {
+        flatDir {
+            dirs 'libs' //this way we can find the .aar file in libs folder
+        }
+    }
 }
+

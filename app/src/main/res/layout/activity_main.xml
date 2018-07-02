@@ -4,18 +4,29 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+
+    <!--<com.example.mydemo.widget.DrawHookView-->
+        <!--android:layout_width="100dp"-->
+        <!--android:layout_height="100dp"-->
+        <!--android:layout_gravity="center_horizontal"/>-->
+
     <Button
-        android:id="@+id/btn_native"
+        android:id="@+id/btn_test"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:clickable="true"
-        android:text="原生H5加载"/>
-    <Button
-        android:id="@+id/btn_VasSonic"
+        android:text="获取数据"/>
+
+    <TextView
+        android:id="@+id/tv_token"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:clickable="true"
-        android:text="腾讯加速H5加载"/>
+        android:layout_height="wrap_content" />
+
+    <com.example.mydemo.widget.PieChartView
+        android:id="@+id/piechart_view"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_margin="10dp"
+        android:layout_gravity="center_horizontal"/>
 
 
 </LinearLayout>
