@@ -1,33 +1,28 @@
-package com.example.mydemo;
+package com.example.mydemo.ui.activity;
 
-import android.content.Context;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.mydemo.R;
 import com.example.mydemo.base.BaseMvpActivity;
-import com.example.mydemo.bean.MattersBeanInfo;
-import com.example.mydemo.network.base.ApiRequestTrans;
-import com.example.mydemo.network.bean.BaseBean;
-import com.example.mydemo.network.base.BaseObserver;
-import com.example.mydemo.network.RetrofitFactory;
+import com.example.mydemo.ui.presenter.MainContract;
+import com.example.mydemo.ui.presenter.MainPresenter;
 import com.example.mydemo.widget.PieChartView;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Random;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
-import io.reactivex.Observer;
-import io.reactivex.android.schedulers.AndroidSchedulers;
-import io.reactivex.disposables.Disposable;
-import io.reactivex.schedulers.Schedulers;
 
+/**
+ * @Author yinfx
+ * @Date 2018/9/27
+ * @Description 首页
+ */
 public class MainActivity extends BaseMvpActivity<MainPresenter> implements MainContract.View {
 
     @BindView(R.id.tv_token)
@@ -37,7 +32,6 @@ public class MainActivity extends BaseMvpActivity<MainPresenter> implements Main
     @BindView(R.id.piechart_view)
     PieChartView pieChartView;
 
-    public static final String TAG = "MainActivity";
 
     @Override
     protected int getLayoutResId() {

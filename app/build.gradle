@@ -1,6 +1,5 @@
 apply plugin: 'com.android.application'
 apply from: '../dependencies.gradle'
-apply plugin: 'com.jakewharton.butterknife'
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
@@ -11,8 +10,6 @@ dependencies {
     annotationProcessor 'com.jakewharton:butterknife-compiler:' + mydemo.butterknife_compiler
 
     //友盟推送相关
-
-
     //PushSDK
 //    compile 'com.umeng.sdk:push:4.1.0'
 

@@ -1,10 +1,10 @@
 ext.versions = [
         // android sdk
-        buildTools    : "25.0.0",
+        buildTools    : "28.0.0",
         minSdk        : 15,
-        targetSdk     : 25,
-        compileSdk    : 25,
-        supportLibrary: '25.3.1',  //v4、v7包
+        targetSdk     : 28,
+        compileSdk    : 28,
+        supportLibrary: '28.0.0',  //v4、v7包
         multidex      : '1.0.1',
 
 ]

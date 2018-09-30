@@ -1,4 +1,4 @@
-package com.example.mydemo;
+package com.example.mydemo.ui.presenter;
 
 import android.content.Context;
 import android.util.Log;
@@ -42,6 +42,7 @@ public class MainPresenter extends BaseMvpPrester<MainContract.View> implements 
         Map map = new HashMap();
         map.put("pageIndex", -1);
         map.put("pageSize", "5");
+
         RetrofitFactory.getInstance().getRequestService()
                 .getProRegularList(map)
                 .compose(new ApiRequestTrans())

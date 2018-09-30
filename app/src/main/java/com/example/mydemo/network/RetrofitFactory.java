@@ -53,11 +53,11 @@ public class RetrofitFactory {
     private void init() {
         //公用拦截器，添加post公共请求参数  Constants.PACKAGE 和 Constants.CFROM
         CommonInterceptor commonInterceptor = new CommonInterceptor.Builder()
-                .addHeaderParam("deviceId", DeviceUtils.getUniqueId(MyApplication.applicationContext) + "")//添加头部信息
+                .addHeaderParam("deviceId", DeviceUtils.getUniqueId(MyApplication.getInstance()) + "")//添加头部信息
                 .addHeaderParam("token", "")
                 .addHeaderParam("phone", "")
                 .addHeaderParam("channel", BuildConfig.FLAVOR + "")
-                .addHeaderParam("versionCode", ApkVersionUtils.getVersionCode(MyApplication.applicationContext) + "")
+                .addHeaderParam("versionCode", ApkVersionUtils.getVersionCode(MyApplication.getInstance()) + "")
 //                .addParam("from", "android") //添加公共参数到 post 请求体
 //                .addQueryParam("version","1")  // 添加公共版本号，加在 URL 后面
 //                .addHeaheadPaLine("X-Ping: Pong")  // 示例： 添加公共消息头

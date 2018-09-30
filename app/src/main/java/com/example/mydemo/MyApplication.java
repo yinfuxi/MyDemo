@@ -1,30 +1,33 @@
 package com.example.mydemo;
 
 import android.app.Application;
-import android.content.Context;
 import android.util.Log;
 
+import com.example.mylibrary.utils.LogUtils;
+import com.orhanobut.logger.AndroidLogAdapter;
+import com.orhanobut.logger.Logger;
 import com.umeng.commonsdk.UMConfigure;
 import com.umeng.message.IUmengRegisterCallback;
 import com.umeng.message.PushAgent;
 
-public class MyApplication extends Application{
 
-    public static final String TAG = "MyApplication";
-    public static Context applicationContext;
+public class MyApplication extends Application {
+
+    private static final String TAG = "MyApplication";
+    private static MyApplication mContext;
 
     @Override
     public void onCreate() {
         super.onCreate();
-        applicationContext = getApplicationContext();
-        Log.d(TAG, "----------");
+        mContext = this;
+        LogUtils.d(TAG, "----------");
+        //初始化友盟推送
         initUMPush();
-        initNet();
-
+        LogUtils.init();
     }
 
-    private void initNet() {
-
+    public static MyApplication getInstance() {
+        return mContext;
     }
 
     /**

@@ -4,6 +4,8 @@ package com.example.mydemo.network.interceptor;
 import android.text.TextUtils;
 import android.util.Log;
 
+import com.example.mylibrary.utils.LogUtils;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -83,10 +85,10 @@ public class CommonInterceptor implements Interceptor {
             }
         }
         request = requestBuilder.build();
-        Log.d("CommonInterceptor", "url:" + request.url());
-        Log.d("CommonInterceptor", "method:" + request.method());
+        LogUtils.d("CommonInterceptor", "url:" + request.url());
+        LogUtils.d("CommonInterceptor", "method:" + request.method());
         if (canInjectIntoBody(request)) {
-            Log.d("CommonInterceptor", "request-body:" + bodyToString(request.body()));
+            LogUtils.d("CommonInterceptor", "request-body:" + bodyToString(request.body()));
         }
         return chain.proceed(request);
     }

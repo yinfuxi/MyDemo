@@ -1,4 +1,4 @@
-package com.example.mydemo;
+package com.example.mydemo.ui.presenter;
 
 import com.example.mylibrary.mvp.MvpPresenter;
 import com.example.mylibrary.mvp.MvpView;
