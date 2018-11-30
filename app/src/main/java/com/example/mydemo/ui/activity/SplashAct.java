@@ -1,63 +1,117 @@
 package com.example.mydemo.ui.activity;
 
+import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.design.widget.BottomNavigationView;
+import android.support.v4.app.Fragment;
+import android.support.v4.view.ViewPager;
+import android.view.MenuItem;
+
+import com.example.mydemo.R;
+import com.example.mydemo.base.BaseAppActivity;
+import com.example.mydemo.ui.adapter.PagerViewAdapter;
+import com.example.mydemo.ui.fragment.HomeFragment;
+import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import butterknife.BindView;
+import jiguang.chat.activity.fragment.ConversationListFragment;
+import jiguang.chat.utils.JIMHelp;
+
 /**
  * @Author yinfx
  * @Date 2018/9/27
  * @Description
  */
-public class SplashAct {
-
-    public static void main(String[] args) {
+public class SplashAct extends BaseAppActivity {
 
 
-        //10000000(别数了2千万)内，素数有664579个，查找用时2185毫秒
-        int maxNum = 200000000;
-        testSushu(maxNum);
+    @BindView(R.id.bnve)
+    BottomNavigationViewEx bnve;
+    @BindView(R.id.viewpager)
+    ViewPager viewpager;
 
+    private final String[] title = {"", "", "", "", ""};
+    private List<Fragment> fragmentList;
+
+    @Override
+    protected int getLayoutResId() {
+        return R.layout.act_splash;
     }
 
-    /**
-     * @Title testSushu
-     * @Description 比1大的整数中,除了1和它本身以外,不再有别的因数,这种整数叫做质数或素数
-     * @param maxNum 最大值范围
-     */
-    private static void testSushu(int maxNum) {
-        long t = System.currentTimeMillis();
-        boolean[] primes = new boolean[maxNum + 1]; // 质数数组
+    @Override
+    protected void initView(Bundle savedInstanceState) {
+        super.initView(savedInstanceState);
 
-        // 初始化所有数字为true
-        for (int i = 0; i < primes.length; i++) {
-            primes[i] = true;
-        }
+        initJGIM();
 
-        //筛法主要的思路是:
-        //对于这么多数，如果一个数是素数的倍数，那么那个数肯定不是素数。
-        //所以从k=2开始，将数组中2的倍数（不包括2）的布尔值改为false，代表它们不是素数，
-        //然后k=3，进行一次筛选,k=5，进行一次筛选。。。。
-        //一直遍历到k的平方根为止，剩下的留在数组中的数就是素数
-        for (int k = 2; k <= maxNum / k; k++) {
-            if (primes[k]) {
-                for (int i = k; i <= maxNum / k; i++) {
-                    primes[k * i] = false; // k * i is not prime
+        fragmentList = new ArrayList<>();
+        fragmentList.add(new ConversationListFragment());
+        fragmentList.add(HomeFragment.newInstance());
+        fragmentList.add(HomeFragment.newInstance());
+        fragmentList.add(HomeFragment.newInstance());
+        fragmentList.add(HomeFragment.newInstance());
+        initBottom();
+    }
+
+    private void initJGIM() {
+        JIMHelp.getInstance().init(getApplicationContext(),"uid123","123456");
+    }
+
+
+    private void initBottom() {
+        viewpager.setOffscreenPageLimit(3);
+        viewpager.setAdapter(new PagerViewAdapter(title, fragmentList, getSupportFragmentManager()));
+        viewpager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int i, float v, int i1) {
+
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+                bnve.getMenu().getItem(position).setChecked(true);
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int i) {
+
+            }
+        });
+
+        //禁止所有动画
+        bnve.enableAnimation(false);
+        bnve.setLabelVisibilityMode(1);
+        bnve.setItemHorizontalTranslationEnabled(false);
+        //使用自己的选中图标时一定设置这句
+        bnve.setItemIconTintList(null);
+
+        bnve.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                switch (menuItem.getItemId()) {
+                    case R.id.tab_home:
+                        viewpager.setCurrentItem(0);
+                        break;
+                    case R.id.tab_recommend:
+                        viewpager.setCurrentItem(1);
+                        break;
+                    case R.id.tab_message:
+                        viewpager.setCurrentItem(2);
+                        break;
+                    case R.id.tab_news:
+                        viewpager.setCurrentItem(3);
+                        break;
+                    case R.id.tab_mine:
+                        viewpager.setCurrentItem(4);
+                        break;
+
                 }
+                return false;
             }
-        }
-
-        final int NUMBER_PER_LINE = 30; // 一行显示10个数字
-        int count = 0; // 到目前为止找到的质数数量
-        // 打印质数
-        for (int i = 2; i < primes.length; i++) {
-            if (primes[i]) {
-                count++;
-                /*if (count % NUMBER_PER_LINE == 0)
-                    System.out.printf("%8d\n", i);
-                else
-                    System.out.printf("%8d", i);*/
-            }
-        }
-        System.out.println("\n质数数量【" + count + "】个");
-        long diff = System.currentTimeMillis() - t;
-        System.out.println("计算用时【" + diff + "】毫秒");
+        });
     }
 
 }

@@ -1,6 +1,8 @@
 package com.example.mydemo;
 
 import android.app.Application;
+import android.content.Context;
+import android.support.multidex.MultiDex;
 import android.util.Log;
 
 import com.example.mylibrary.utils.LogUtils;
@@ -10,8 +12,10 @@ import com.umeng.commonsdk.UMConfigure;
 import com.umeng.message.IUmengRegisterCallback;
 import com.umeng.message.PushAgent;
 
+import jiguang.chat.application.JGApplication;
 
-public class MyApplication extends Application {
+
+public class MyApplication extends JGApplication {
 
     private static final String TAG = "MyApplication";
     private static MyApplication mContext;
@@ -55,5 +59,10 @@ public class MyApplication extends Application {
                 Log.i(TAG, "register failed: " + s + " " + s1);
             }
         });
+    }
+
+    protected void attachBaseContext(Context base) {
+        super.attachBaseContext(base);
+        MultiDex.install(this);
     }
 }

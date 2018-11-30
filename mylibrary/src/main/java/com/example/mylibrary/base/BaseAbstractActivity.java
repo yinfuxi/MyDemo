@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
 import com.example.mylibrary.framework.AppManager;
+import com.example.mylibrary.utils.LogUtils;
 
 
 /**
@@ -52,30 +53,30 @@ public abstract class BaseAbstractActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        Log.d(TAG, "@@onStart----");
+        LogUtils.d(TAG, "@@onStart----");
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        Log.d(TAG, "@@onResume----");
+        LogUtils.d(TAG, "@@onResume----");
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        Log.d(TAG, "@@onPause----");
+        LogUtils.d(TAG, "@@onPause----");
     }
 
     @Override
     protected void onStop() {
         super.onStop();
-        Log.d(TAG, "@@onStop----");
+        LogUtils.d(TAG, "@@onStop----");
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        Log.d(TAG, "@@onDestroy----");
+        LogUtils.d(TAG, "@@onDestroy----");
     }
 }

@@ -1,6 +1,5 @@
 package com.example.mylibrary.mvp;
 
-import java.lang.ref.Reference;
 import java.lang.ref.WeakReference;
 
 /**

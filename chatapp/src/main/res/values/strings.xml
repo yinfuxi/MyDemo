@@ -1,0 +1,158 @@
+<resources>
+    <string name="app_name">JChat</string>
+
+    <!-- ReLogin/login/register界面中使用到的字符串 -->
+    <string name="login">登录</string>
+    <string name="login_hint">登录中</string>
+    <string name="all_images">全部图片</string>
+    <string name="select_limit">最多选择%1$s张图片</string>
+    <string name="folder_image_count">共%1$d张</string>
+    <string name="select_complete">完成(%1$s/%2$s)</string>
+    <string name="select_send">完成(%1$s/%2$s)</string>
+    <string name="preview_count">预览(%1$s)</string>
+    <string name="preview_image_count">%1$s/%2$s</string>
+    <string name="origin_size">原图(%1$s)</string>
+    <string name="jmui_delete_conv">删除该聊天</string>
+
+    <!-- fixProfile界面中使用到的字符串 -->
+
+    <!--聊天相关-->
+    <string name="network_disconnected_hint">当前网络不可用, 请检查您的网络设置</string>
+    <string name="actionbar_msg">会话</string>
+    <string name="actionbar_contact">通讯录</string>
+    <string name="actionbar_me">我</string>
+    <string name="add">添加</string>
+    <string name="add_friend">添加好友</string>
+    <string name="creating_hint">创建中</string>
+    <string name="creating_msg">意见反馈中</string>
+    <string name="jmui_delete">删除</string>
+    <string name="picture_save_fail">图片保存失败</string>
+    <string name="picture_save_to">图片已保存到手机</string>
+    <string name="jmui_create_file_failed">创建文件失败</string>
+    <string name="jmui_record_voice_hint">按住 说话</string>
+    <string name="jmui_cancel_record_voice_hint">松开手指，取消发送</string>
+    <string name="jmui_send_voice_hint">松开 结束</string>
+    <string name="jmui_move_to_cancel_hint">手指上滑，取消发送</string>
+    <string name="combine_title">(%s)</string>
+    <string name="jmui_file_not_found_toast">文件丢失, 尝试重新获取</string>
+    <string name="jmui_loading">正在加载</string>
+    <string name="origin_picture">原图</string>
+    <string name="choose">选择</string>
+    <string name="jmui_send">发送</string>
+    <string name="already_select">已选</string>
+    <string name="sending_hint">正在发送</string>
+    <string name="jmui_cancel">取消</string>
+    <string name="picture_num_limit_toast">你最多只能同时发送9张图片</string>
+    <string name="load_origin_image">查看原图</string>
+    <string name="downloading_hint">正在下载</string>
+    <string name="download_completed_toast">下载完成</string>
+    <string name="jmui_voice_length">10"</string>
+    <string name="jmui_symbol_second">\"</string>
+    <string name="file_fetch_failed">文件获取失败</string>
+    <string name="jmui_record_voice_permission_request">若要使用语音功能，请选择允许录音</string>
+    <string name="draft">[草稿]</string>
+    <string name="type_picture">[图片]</string>
+    <string name="type_voice">[语音]</string>
+    <string name="type_location">[位置]</string>
+    <string name="type_file">[文件]</string>
+    <string name="type_smallvideo">[小视频]</string>
+    <string name="type_video">[视频]</string>
+    <string name="send_location_error">位置截图失败或会话为空</string>
+    <string name="jmui_video">视频</string>
+    <string name="group_notification">[群组消息]</string>
+    <string name="type_custom">[自定义消息]</string>
+    <string name="jmui_time_format_accuracy">yyyy-MM-dd HH:mm:ss </string>
+    <string name="jmui_monday">周一</string>
+    <string name="jmui_tuesday">周二</string>
+    <string name="jmui_wednesday">周三</string>
+    <string name="jmui_thursday">周四</string>
+    <string name="jmui_friday">周五</string>
+    <string name="jmui_saturday">周六</string>
+    <string name="jmui_sunday">周日</string>
+    <string name="jmui_local_picture_not_found_toast">暂无外部存储，某些本地图片不可预览</string>
+    <string name="jmui_sdcard_not_exist_toast">暂无外部存储</string>
+    <string name="sdcard_not_prepare_toast">sdcard尚未准备好</string>
+
+    <string name="select_friend_title">添加成员</string>
+    <string name="selected_num">(%s)</string>
+
+    <!-- 通讯录相关-->
+    <string name="friend_inviting">等待验证</string>
+    <string name="input_friend_username_hint">请输入您要查找的用户名</string>
+    <string name="accept">同意</string>
+    <string name="refused">已拒绝</string>
+    <string name="processing">正在处理</string>
+    <string name="decline_friend_invitation">对方已拒绝</string>
+    <string name="delete_friend_dialog_title">确定删除好友？</string>
+
+    <!-- 发送文件 -->
+    <string name="file">文件</string>
+    <string name="document">文档</string>
+    <string name="album">相册</string>
+    <string name="audio">音频</string>
+    <string name="other">其他</string>
+    <string name="size_over_limit_hint">所选的文件数量不得超过5个</string>
+    <string name="file_size_over_limit_hint">所选的文件大小总和不得超过10M</string>
+    <string name="download_file_succeed">下载成功</string>
+    <string name="download_file_failed">下载失败</string>
+    <string name="file_not_support_hint">无法打开该类型的文件</string>
+
+    <!--设置相关-->
+    <string name="jmui_confirm">确定</string>
+    <string name="man">男</string>
+    <string name="woman">女</string>
+    <string name="unknown">未知</string>
+    <string name="set_do_not_disturb">消息免打扰</string>
+    <string name="set_do_not_disturb_success_hint">成功加入免打扰</string>
+    <string name="remove_from_no_disturb_list_hint">已移除免打扰</string>
+    <string name="somebody_at_me">[有人@我]</string>
+
+    <!--聊天详情-->
+    <string name="group">群聊</string>
+    <string name="unnamed">未命名</string>
+    <string name="undesc">无描述</string>
+    <string name="added">已添加</string>
+    <string name="chat_detail_title">聊天设置</string>
+    <string name="group_name_hit">群名称</string>
+    <string name="add_friend_to_group_title">添加好友到群组</string>
+    <string name="searching_user">正在查找</string>
+    <string name="adding_hint">正在添加</string>
+    <string name="modifying_hint">正在修改</string>
+    <string name="exiting_group_toast">正在处理</string>
+    <string name="group_people_num_hit">群人数上限</string>
+    <string name="group_my_name_hit">我在本群昵称</string>
+    <string name="group_chat_history_hit">查找聊天内容</string>
+    <string name="group_clear_history_hit">清空聊天记录</string>
+    <string name="deleting_hint">删除中</string>
+    <string name="group_exit_btn">删除并退出</string>
+
+    <!-- 下线提示 -->
+
+    <string name="ac_search_no_result_pre">没有搜到</string>
+    <string name="ac_search_no_result_suffix">相关的信息</string>
+    <!--以下为错误码提示-->
+    <string name="jmui_server_803008">消息已发出，但被对方拒收了。</string>
+    <string name="gallery_invalid">未找到图库</string>
+    <string name="sdcard_not_enough_head_error">SD卡被拔出或存储空间不足</string>
+    <string name="sdcard_not_enough_error">存储空间不足</string>
+    <string name="picker_image_error">获取图片出错</string>
+    <string name="picker_image_preview">预览</string>
+    <string name="picker_image_folder">相机胶卷</string>
+    <string name="picker_image_preview_original">发送原图</string>
+    <string name="picker_image_album_loading">相册加载中…</string>
+    <string name="picker_image_album_empty">相册中没有图片！</string>
+    <string name="picker_image_folder_info">共%d张</string>
+    <string name="picker_image_exceed_max_image_select">最多选择%d张图片！</string>
+    <string name="unknow_size">未知大小</string>
+    <string name="picker_image_send_select">发送（%d）</string>
+    <string name="picker_image_preview_original_select">发送原图（%s）</string>
+    <string name="ok">确定</string>
+    <string name="cancel">取消</string>
+    <string name="picker_internalerror">发生错误</string>
+    <string name="set_block_succeed_hint">群消息屏蔽成功</string>
+    <string name="remove_block_succeed_hint">已移除群消息屏蔽</string>
+    <string name="btn_text_speak">按住录音</string>
+    <string name="btn_send">发送</string>
+    <string name="set_to_block">屏蔽群消息</string>
+
+</resources>

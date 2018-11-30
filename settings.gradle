@@ -1,1 +1,1 @@
-include ':app', ':mylibrary', ':push'
+include ':app', ':mylibrary', ':push',"chatapp"

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/tab_home"
+        android:checked="true"
+        android:icon="@drawable/main_botton_sel_home"
+        android:title="首页1" />
+    <item
+        android:id="@+id/tab_recommend"
+        android:icon="@drawable/main_botton_sel_home2"
+        android:title="首页2" />
+    <item
+        android:id="@+id/tab_message"
+        android:icon="@drawable/main_botton_sel_home3"
+        android:title="首页3" />
+    <item
+        android:id="@+id/tab_news"
+        android:icon="@drawable/main_botton_sel_home4"
+        android:title="首页4" />
+    <item
+        android:id="@+id/tab_mine"
+        android:icon="@drawable/main_botton_sel_home5"
+        android:title="首页5" />
+</menu>
