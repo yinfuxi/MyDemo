@@ -27,6 +27,11 @@ dependencies {
     //BottomNavigationViewEx 底部导航栏
     compile 'com.github.ittianyu:BottomNavigationViewEx:2.0.2'
 
+    //黄牛刀注解
+    compile 'com.jakewharton:butterknife:' + mydemo.butterknife
+
+    //方法数超过了65536的分包方案
+    compile 'com.android.support:multidex:1.0.1'
 }
 
 

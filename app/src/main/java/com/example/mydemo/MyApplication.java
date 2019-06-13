@@ -24,10 +24,10 @@ public class MyApplication extends JGApplication {
     public void onCreate() {
         super.onCreate();
         mContext = this;
-        LogUtils.d(TAG, "----------");
         //初始化友盟推送
         initUMPush();
         LogUtils.init();
+        LogUtils.d(TAG, "----------");
     }
 
     public static MyApplication getInstance() {

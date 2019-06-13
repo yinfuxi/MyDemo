@@ -7,7 +7,6 @@ dependencies {
     compile project(':push')
     compile project(':chatapp')
     //黄牛刀注解
-    compile 'com.jakewharton:butterknife:' + mydemo.butterknife
     annotationProcessor 'com.jakewharton:butterknife-compiler:' + mydemo.butterknife_compiler
 
     compile 'com.android.support:multidex:1.0.1'
